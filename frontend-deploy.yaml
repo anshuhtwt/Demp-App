@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deploy
+spec:
+  selector:
+    matchLabels:
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: c1
+        image: anshustwt/demo-app-frontend
+        ports:
+        - containerPort: 5000
