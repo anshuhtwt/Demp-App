@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: c1
-        image: anshustwt/demo-app-frontend
+        image: anshustwt/demo-app-backend
         ports:
         - containerPort: 27017
